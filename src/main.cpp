@@ -16,7 +16,7 @@
     {
         void onResult(BLEAdvertisedDevice advertisedDevice)
         {
-            if (strcmp(advertisedDevice.getName().c_str(), "Radiation") >= 0)
+            if (advertisedDevice.getName().compare("RadiationBeacon") == 0)
             {
                 Serial.print(advertisedDevice.getName().c_str());
                 Serial.printf(": %d \n", advertisedDevice.getRSSI());
